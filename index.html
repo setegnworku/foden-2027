@@ -1,0 +1,410 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ancestry-aware genomic evaluation of admixed dairy cattle in Africa · Sue Foden Travel Award 2027</title>
+<meta name="description" content="Companion page to the application to the Dr Sue Foden Travel Award 2027: a 12-week visit by Setegn Worku Alemu (ILRI) to the Roslin Institute.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <p class="hero-kicker">Dr Sue Foden Travel Award 2027 · companion to the application</p>
+    <h1>Ancestry-aware genomic evaluation of admixed <i>Bos taurus</i> × <i>Bos indicus</i> dairy cattle in Africa</h1>
+    <p class="hero-sub-title">Strengthening ILRI–Roslin collaboration in statistical genomics</p>
+    <p class="hero-sub">A 12-week visit to the Roslin Institute (2027) · Setegn Worku Alemu, ILRI</p>
+
+    <div class="tiles">
+      <div class="tile tile-sub">
+        <p class="tile-big">Subspecies, not breeds</p>
+        <div class="contrast" aria-hidden="true">
+          <div class="contrast-pane pane-a">
+            <p class="pair"><span class="chip tau">Holstein</span><span class="times">×</span><span class="chip tau">Jersey</span></p>
+            <p class="pair-label">breeds of one subspecies</p>
+          </div>
+          <div class="contrast-pane pane-b">
+            <p class="pair"><span class="chip tau">Holstein</span><span class="times">×</span><span class="chip ind">Boran</span></p>
+            <p class="pair-label">two subspecies</p>
+          </div>
+        </div>
+        <p class="tile-small contrast-fallback">Holstein × Jersey: breeds of one subspecies. Holstein × Boran joins <i>Bos taurus</i> and <i>Bos indicus</i>: two subspecies.</p>
+      </div>
+      <div class="tile tile-gain">
+        <p class="tile-big"><span data-key="bothGain">+0.08 to +0.10</span></p>
+        <p class="tile-small">accuracy of breeding values (simulated, interim)</p>
+      </div>
+      <div class="tile tile-paper">
+        <p class="tile-big">1 manuscript</p>
+        <p class="tile-small">completed during the visit, with Roslin co-authorship and guidance</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="topnav" aria-label="Sections">
+  <div class="wrap nav-inner">
+    <a class="nav-brand" href="#top">ILRI · Roslin 2027</a>
+    <ul>
+      <li><a href="#problem">Problem</a></li>
+      <li><a href="#matrix">One matrix</a></li>
+      <li><a href="#already">Preliminary work</a></li>
+      <li><a href="#plan">Plan</a></li>
+      <li><a href="#delivers">Outcomes</a></li>
+      <li><a href="#people">People</a></li>
+      <li><a href="#budget">Budget</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <aside class="keymsg card">
+    <p class="gap-title">The gap this visit fills</p>
+    <div class="gap-grid">
+      <div>
+        <p class="gap-k">Africa's dairy cows are crossbred</p>
+        <p>Most recorded cows are taurine × indicine crosses: two subspecies in one genome.</p>
+      </div>
+      <div>
+        <p class="gap-k">Evaluation ignores this</p>
+        <p>Genomic evaluation still treats all cows as one population.</p>
+      </div>
+      <div>
+        <p class="gap-k">The right models are untested here</p>
+        <p>Ancestry-aware models were built for Europe, where gains are modest. They should matter most in Africa,
+          yet have hardly been tested there.</p>
+      </div>
+    </div>
+    <p class="gap-close">This visit joins ILRI's simulator and data with Roslin's methods and national-scale tools to
+      close that gap, and ends with a completed manuscript and a workflow ILRI's breeding programmes can use.</p>
+  </aside>
+
+  <!-- 1. Problem -->
+  <section id="problem" class="card">
+    <p class="eyebrow">1 · The problem</p>
+    <h2>Two subspecies in one cow</h2>
+    <div class="cards3">
+      <div class="mini key">
+        <h3>Crossbred cows</h3>
+        <p>Most recorded dairy cows in East Africa are crosses of exotic <i>Bos taurus</i> and indigenous, largely
+          <i>Bos indicus</i> cattle, such as Holstein × Boran.</p>
+      </div>
+      <div class="mini key">
+        <h3>Two subspecies</h3>
+        <p>This is a cross between two subspecies, not two breeds as in Europe.</p>
+      </div>
+      <div class="mini key">
+        <h3>Untested where it matters</h3>
+        <p>In Europe, ancestry-aware models gave modest gains because the breeds are close. In Africa they should
+          matter most, yet they have hardly been tested there.</p>
+      </div>
+    </div>
+
+    <figure class="fig">
+      <figcaption class="fig-title">Figure A. Two subspecies, not two breeds</figcaption>
+      <div class="fig-canvas" data-fig="A"></div>
+      <p class="fig-caption"><b>Taurine</b> and <b>indicine</b> cattle were domesticated separately, and had diverged
+        long before domestication.</p>
+    </figure>
+
+    <figure class="fig">
+      <figcaption class="fig-title">Figure B. Each cow is a mosaic</figcaption>
+      <div class="fig-canvas" data-fig="B"></div>
+      <p class="fig-caption">Within one village, exotic ancestry ranges from <b>under 20 %</b> to <b>over 90 %</b>.</p>
+    </figure>
+  </section>
+
+  <!-- 2. One matrix -->
+  <section id="matrix" class="card">
+    <p class="eyebrow">2 · The gap</p>
+    <h2>Why one relationship matrix is not enough</h2>
+    <p>Genomic evaluation still treats all cows as one population. Three things can go wrong:</p>
+
+    <div class="cards3">
+      <div class="mini">
+        <h3>Indigenous effects are poorly estimated</h3>
+        <p>They are learned mostly from exotic-rich cows.</p>
+      </div>
+      <div class="mini">
+        <h3>Indigenous-rich cows are misjudged</h3>
+        <p>Their breeding values are over-dispersed when allele effects differ between origins.</p>
+      </div>
+      <div class="mini">
+        <h3>The adaptive indigenous contribution is invisible</h3>
+        <p>So it is not managed.</p>
+      </div>
+    </div>
+
+    <figure class="fig">
+      <figcaption class="fig-title">Figure C. One matrix vs ancestry-aware</figcaption>
+      <div class="fig-canvas" data-fig="C"></div>
+      <p class="fig-caption">Ancestry-aware models follow the <b>breed origin of each chromosome segment</b>.</p>
+    </figure>
+  </section>
+
+  <!-- 3. Already -->
+  <section id="already" class="card">
+    <p class="eyebrow">3 · Preliminary work</p>
+    <h2>The groundwork is already done</h2>
+    <p>With the guidance of Gregor Gorjanc, I built a simulator that mimics African production systems: admixed
+      taurine × indicine cows with the origin of every allele known, and a spatial environment. The population
+      structure is taken from Houaga et al. (2026): the real herd structure of Tanzanian smallholder data, where most
+      herds keep one cow.</p>
+
+    <div class="highlight">
+      <div class="hl-num"><span data-key="bothGain">+0.08 to +0.10</span><small>accuracy (simulated, interim)</small></div>
+      <div>
+        <p class="results-head">Preliminary analysis: the idea works</p>
+        <p>The ancestry-aware model and the spatial field together raised the accuracy of breeding values. This result
+          comes from one specific simulated population. The core of the visit is to test it across a broad range of
+          parameters.</p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <h3>A lesson from real data</h3>
+      <p>Indigenous ancestry can be lost between genotyping and the relationship matrix. Ancestry-aware evaluation
+        needs a genotype pipeline that preserves it.</p>
+    </div>
+  </section>
+
+  <!-- 4. Plan -->
+  <section id="plan" class="card">
+    <p class="eyebrow">4 · The plan for the 12 weeks</p>
+    <h2>Simulate, test, implement, validate, publish</h2>
+
+    <figure class="fig">
+      <figcaption class="fig-title">Figure F. The plan</figcaption>
+      <ol class="flow" aria-label="Five steps: Simulate, Test, Implement, Validate, Publish">
+        <li class="step">
+          <span class="step-n">1</span>
+          <h3>Simulate</h3>
+          <p>A broad parameter range: exotic genes placed by region, a range of differences between origins, breed origin inferred.</p>
+        </li>
+        <li class="step">
+          <span class="step-n">2</span>
+          <h3>Test</h3>
+          <p>Accuracy, bias and dispersion against the truth.</p>
+        </li>
+        <li class="step">
+          <span class="step-n">3</span>
+          <h3>Implement</h3>
+          <p>Variance components, then breeding values with MiX99.</p>
+        </li>
+        <li class="step">
+          <span class="step-n">4</span>
+          <h3>Validate</h3>
+          <p>Ancestry-preserving genotype pipeline; existing AADGG data.</p>
+        </li>
+        <li class="step">
+          <span class="step-n">5</span>
+          <h3>Publish</h3>
+          <p>One manuscript completed during the visit.</p>
+        </li>
+      </ol>
+    </figure>
+
+    <h3 class="sub">Three objectives</h3>
+    <div class="cards3">
+      <div class="mini obj">
+        <span class="obj-n">Objective 1</span>
+        <h3>Test</h3>
+        <p>Ancestry-aware models across a broad range of simulated African production systems.</p>
+      </div>
+      <div class="mini obj">
+        <span class="obj-n">Objective 2</span>
+        <h3>Implement</h3>
+        <p>A national-scale workflow with MiX99, with Gregor Gorjanc's group.</p>
+      </div>
+      <div class="mini obj">
+        <span class="obj-n">Objective 3</span>
+        <h3>Validate</h3>
+        <p>An ancestry-preserving genotype pipeline, applied to Tanzanian AADGG data.</p>
+      </div>
+    </div>
+
+    <figure class="fig">
+      <figcaption class="fig-title">Figure G. 12-week timeline</figcaption>
+      <div class="gantt" role="img" aria-label="Timeline of the 12 weeks. Weeks 1 to 2: extend the simulation. Weeks 3 to 4: models in MiX99. Weeks 5 to 7: genotype pipeline and local ancestry. Weeks 8 to 9: validation on existing data. Weeks 10 to 12: complete the manuscript, seminar, joint proposal. Milestone at week 12: manuscript completed.">
+        <div class="g-row g-head" aria-hidden="true">
+          <div class="g-label">Week</div>
+          <div class="g-weeks"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span></div>
+        </div>
+        <div class="g-row">
+          <div class="g-label"><b>1–2</b> · Extend the simulation to a broad parameter range</div>
+          <div class="g-track"><div class="g-bar" style="grid-column: 1 / 3"></div></div>
+        </div>
+        <div class="g-row">
+          <div class="g-label"><b>3–4</b> · Models in MiX99</div>
+          <div class="g-track"><div class="g-bar" style="grid-column: 3 / 5"></div></div>
+        </div>
+        <div class="g-row">
+          <div class="g-label"><b>5–7</b> · Genotype pipeline, local ancestry</div>
+          <div class="g-track"><div class="g-bar" style="grid-column: 5 / 8"></div></div>
+        </div>
+        <div class="g-row">
+          <div class="g-label"><b>8–9</b> · Validation on existing data</div>
+          <div class="g-track"><div class="g-bar" style="grid-column: 8 / 10"></div></div>
+        </div>
+        <div class="g-row">
+          <div class="g-label"><b>10–12</b> · Manuscript, seminar, joint proposal</div>
+          <div class="g-track"><div class="g-bar" style="grid-column: 10 / 13"></div><span class="g-ms" title="Week 12: manuscript completed"></span></div>
+        </div>
+        <div class="g-row g-foot">
+          <div class="g-label"></div>
+          <div class="g-ms-label"><span class="g-ms-key" aria-hidden="true"></span> Week 12: Manuscript completed</div>
+        </div>
+      </div>
+    </figure>
+  </section>
+
+  <!-- 5. Delivers -->
+  <section id="delivers" class="card">
+    <p class="eyebrow">5 · What the visit delivers</p>
+    <h2>Outcomes</h2>
+
+    <div class="newbox">
+      <h3>What is new</h3>
+      <ul>
+        <li><b>New evidence:</b> ancestry-aware evaluation tested across a broad range of African production systems,
+          where it has hardly been tested.</li>
+        <li><b>A new approach:</b> ancestry-aware evaluation combined with a spatial field for smallholder herds.</li>
+        <li><b>New tools:</b> a national-scale workflow and a genotype protocol that preserves indigenous ancestry.</li>
+      </ul>
+    </div>
+
+    <div class="outcomes">
+      <div class="mini out out-main">
+        <h3>One manuscript, completed during the visit</h3>
+        <p>Ancestry-aware and spatial genomic evaluation of admixed African dairy cattle, with Roslin co-authorship and
+          guidance.</p>
+      </div>
+      <div class="mini out">
+        <h3>Workflow and code</h3>
+        <p>From variance components to MiX99 breeding values.</p>
+      </div>
+      <div class="mini out">
+        <h3>Genotype protocol</h3>
+        <p>Keeps indigenous ancestry through imputation and QC.</p>
+      </div>
+      <div class="mini out">
+        <h3>Joint proposal</h3>
+        <p>An ILRI–Roslin research proposal outlined.</p>
+      </div>
+    </div>
+
+    <div class="two-col benefits">
+      <div class="mini">
+        <h3>For ILRI</h3>
+        <ul>
+          <li>Fairer breeding values for crossbred cows.</li>
+          <li>Ready to implement in genetic evaluations in the AADGG countries that hold these data: Ethiopia, Kenya, Tanzania and Nigeria.</li>
+          <li>Relevant to farmers: the bull chosen for a cow accounts for its ancestry.</li>
+        </ul>
+      </div>
+      <div class="mini">
+        <h3>For the Roslin Institute</h3>
+        <ul>
+          <li>A demanding new test case for its methods.</li>
+          <li>A basis for co-supervised students and exchange visits.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="sub">A starting point, not an end point</h3>
+    <ol class="path" aria-label="Impact of the Award over time">
+      <li>
+        <span class="path-when">During the visit</span>
+        <p>One manuscript, a tested workflow, a genotype protocol.</p>
+      </li>
+      <li>
+        <span class="path-when">After return</span>
+        <p>Seminar and hands-on session at ILRI; joint ILRI–Roslin proposal.</p>
+      </li>
+      <li>
+        <span class="path-when">Longer term</span>
+        <p>Co-supervised students, exchange visits in both directions, a shared research line.</p>
+      </li>
+    </ol>
+
+    <div class="callout callout-green">
+      <p><b>After my return I will coordinate this research line between ILRI and the Roslin Institute</b>, as a
+        connector who moves methods, data analyses and students between the two institutes.</p>
+    </div>
+  </section>
+
+  <!-- 6. People -->
+  <section id="people" class="card">
+    <p class="eyebrow">6 · People and partners</p>
+    <h2>Who is involved</h2>
+    <div class="people">
+      <div class="person">
+        <p class="p-name">Setegn Worku Alemu</p>
+        <p class="p-org">ILRI</p>
+        <p class="p-role">Applicant</p>
+      </div>
+      <div class="person">
+        <p class="p-name">Gregor Gorjanc</p>
+        <p class="p-org">The Roslin Institute</p>
+        <p class="p-role">Host</p>
+      </div>
+      <div class="person">
+        <p class="p-name">Pam Wiener</p>
+        <p class="p-org">The Roslin Institute</p>
+        <p class="p-role">Collaborator: ancestry and genotype pipelines</p>
+      </div>
+      <div class="person">
+        <p class="p-name">Juliane Friedrich</p>
+        <p class="p-org">The Roslin Institute</p>
+        <p class="p-role">Collaborator: ancestry and genotype pipelines</p>
+      </div>
+      <div class="person">
+        <p class="p-name">James Prendergast</p>
+        <p class="p-org">The Roslin Institute</p>
+        <p class="p-role">Collaborator: ancestry and genotype pipelines</p>
+      </div>
+    </div>
+
+    <div class="badges" aria-label="Institutions">
+      <span class="badge-inst"><b>ILRI</b> International Livestock Research Institute</span>
+      <span class="badge-inst"><b>Roslin</b> The Roslin Institute</span>
+      <span class="badge-inst"><b>CTLGH</b> Centre for Tropical Livestock Genetics and Health</span>
+      <span class="badge-inst"><b>AADGG</b> Africa Asia Dairy Genetic Gains</span>
+    </div>
+  </section>
+
+  <!-- 7. Budget -->
+  <section id="budget" class="card">
+    <p class="eyebrow">7 · Budget</p>
+    <h2>£7,500 for a 12-week visit</h2>
+    <div class="callout callout-blue">
+      <p>The Award covers only travel, visa, accommodation, subsistence and local transport. <b>ILRI covers salary,
+        travel insurance and all other costs.</b></p>
+    </div>
+
+    <figure class="fig fig-700">
+      <figcaption class="fig-title">Figure H. Budget requested from the Award</figcaption>
+      <div class="fig-canvas" data-fig="H"></div>
+      <div class="data-slot" data-for="H"></div>
+    </figure>
+
+    <p class="alt">Alternative: <b id="budget-alt">10-week visit: about £6,450</b>.</p>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p>Companion to the application to the Dr Sue Foden Travel Award 2027 · simulated results are interim · 24 November 2026</p>
+    <button type="button" id="print-btn" class="btn">Print / Save as PDF</button>
+  </div>
+</footer>
+
+<div id="tooltip" class="tooltip" role="tooltip" hidden></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
